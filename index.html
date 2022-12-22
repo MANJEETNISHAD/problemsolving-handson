@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem solving</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>question:1 Find the Smaller Angle</h1>
+<pre> var Minimal_Angle = (h, m) => 
+{
+    let angle=0;
+  angle=(30*h-(11/2)*m);
+  if(angle===360)
+  {return 0;}
+  else{
+  return Math.abs(angle);   
+}};</pre>
+<h1>question:2 Check whether the year is Leap year or not. </h1>
+<pre>
+  var Check_Leap = (year) => 
+{
+ if(year%4===0 && year%100!==0){
+   return "Leap Year";
+ }
+  else{
+    return "Non Leap Year";
+  }
+
+};
+ </pre>
+<h1>question:3 Perfect Number Check.</h1>
+<pre> 
+var Perfect_Check = (N) => 
+{
+
+  let sum=0;
+ for(let i=1;i<(N);i++)
+ 
+ {
+   if(N%i===0)
+   {
+     sum+=i;
+   }
+} 
+   return (sum===N?"YES":"NO");    
+};
+ 
+ </pre>
+<h1>question:4 Reverse a Number.</h1>
+<pre>  
+var Reverse_Number = (N) => 
+{
+  let l=N.toString().length;
+  let sum=0;
+  let rem=0;
+  for(let i=1;i<=l;i++){
+    rem=N%10;
+    sum=sum*10+rem;
+    N=parseInt(N/10);
+  }
+  
+  return sum;
+}; 
+ 
+</pre>
+<h1>question:5 Substring Check.</h1>
+<pre> var Substring_Check = (S1, S2) => 
+{
+  // let z=(S1.includes(S2) ? "YES" : "NO");
+  // return z; 
+  return (S1.includes(S2) ? "YES" : "NO");
+};
+</pre>
+</body>
+</html>
